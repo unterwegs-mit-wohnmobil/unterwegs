@@ -1,7 +1,7 @@
 {
   "name": "Unterwegs App",
   "short_name": "Unterwegs",
-  "start_url": "./Videos/Unterwegs.html",
+  "start_url": "./Videos/index.html",
   "scope": ".",
   "display": "standalone",
   "background_color": "#000000",
