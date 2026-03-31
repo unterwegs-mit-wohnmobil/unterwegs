@@ -30,7 +30,7 @@
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script>
     const video = document.getElementById('video');
-    const src = 'playlist.m3u8';
+    const src = 'playlist.m3u8?v=' + Date.now();
 
     if (window.Hls && Hls.isSupported()) {
       const hls = new Hls();
