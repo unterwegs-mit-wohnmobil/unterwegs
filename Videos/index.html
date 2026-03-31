@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Unterwegs WebApp">
+  <title>Unterwegs</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="manifest" href="../manifest.json">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../icon-180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../icon-152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../icon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../icon-76.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+
+</head>
+
+<body>
+
+  <h1>Unterwegs</h1>
+  <video id="video" controls autoplay width="100%"></video>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    const video = document.getElementById('video');
+    const src = 'playlist.m3u8';
+
+    if (window.Hls && Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(src);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.ERROR, function (event, data) {
+        console.error('HLS error', data);
+      });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      // Safari – native HLS
+      video.src = src;
+    } else {
+      console.error('HLS wird in diesem Browser nicht unterstützt');
+      video.insertAdjacentHTML('afterend', '<p style="color:red">HLS nicht unterstützt.</p>');
+    }
+  </script>
+
+
+</body>
+
+</html>

@@ -1,57 +1,63 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-<meta charset="UTF-8">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Unterwegs WebApp">
-<title>Unterwegs</title>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Unterwegs WebApp">
+  <title>Unterwegs</title>
 
-<link rel="stylesheet" href="../style.css">
-<link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="manifest" href="../manifest.json">
 
-<link rel="apple-touch-icon" sizes="180x180" href="../icon-180.png">
-<link rel="apple-touch-icon" sizes="152x152" href="../icon-152.png">
-<link rel="apple-touch-icon" sizes="120x120" href="../icon-120.png">
-<link rel="apple-touch-icon" sizes="76x76" href="../icon-76.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../icon-180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../icon-152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../icon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../icon-76.png">
 
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
 
 </head>
+
 <body>
 
-<div class="header-bar video-page">
-  
-  <div class="title">Unterwegs</div>
-  <noscript>
-    <span style="color: #cc0000; font-size: 0.7em; font-weight: bold; border: 1px solid #cc0000; padding: 2px 5px; border-radius: 4px; margin-left: 5px; white-space: nowrap;">
-      ⚠️ Java Script inaktiv: Steuerung/Ton mglw. limitiert
-    </span>
-  </noscript>
-  
-  
-  
-</div>
+  <div class="header-bar video-page">
 
-<div id="video-wrapper">
+    <div class="title">Unterwegs</div>
+    <noscript>
+      <span
+        style="color: #cc0000; font-size: 0.7em; font-weight: bold; border: 1px solid #cc0000; padding: 2px 5px; border-radius: 4px; margin-left: 5px; white-space: nowrap;">
+        ⚠️ Java Script inaktiv: Steuerung/Ton mglw. limitiert
+      </span>
+    </noscript>
+
+
+
+  </div>
+
+  <div id="video-wrapper">
     <video id="player" controls playsinline loop poster="Unterwegs.jpg" data-timeline='' data-timeline-chapters=''>
-        <source src="Unterwegs.mp4" type="video/mp4">
+      <source src="Unterwegs.mp4" type="video/mp4">
     </video>
 
     <button id="toggle-chapters" title="Kapitel anzeigen (verschiebbar)">
-        <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+      <svg viewBox="0 0 24 24">
+        <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+      </svg>
     </button>
 
     <nav id="chapter-nav" class="hidden"></nav>
-</div>
+  </div>
 
-<div id="thumbs-overlay">
+  <div id="thumbs-overlay">
     <button id="close-overlay" title="Galerie schließen">&times;</button>
     <div id="thumbs-content-target"></div>
-</div>
+  </div>
 
-<script src="../video.js"></script>
+  <script src="../video.js"></script>
 
 </body>
+
 </html>
