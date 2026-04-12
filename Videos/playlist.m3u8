@@ -9,6 +9,8 @@ segment_000.ts
 segment_001.ts
 #EXTINF:9.791667,
 segment_002.ts
-#EXTINF:4.750000,
+#EXTINF:9.791667,
 segment_003.ts
+#EXTINF:9.958333,
+segment_004.ts
 #EXT-X-ENDLIST
