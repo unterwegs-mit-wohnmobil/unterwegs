@@ -13,7 +13,7 @@ segment_002.ts
 segment_003.ts
 #EXTINF:10.000000,
 segment_004.ts
-#EXTINF:10.000000,
+#EXTINF:10.041667,
 segment_005.ts
 #EXTINF:10.000000,
 segment_006.ts
@@ -111,6 +111,14 @@ segment_051.ts
 segment_052.ts
 #EXTINF:10.000000,
 segment_053.ts
-#EXTINF:0.791667,
+#EXTINF:10.000000,
 segment_054.ts
+#EXTINF:10.000000,
+segment_055.ts
+#EXTINF:10.000000,
+segment_056.ts
+#EXTINF:10.000000,
+segment_057.ts
+#EXTINF:5.291667,
+segment_058.ts
 #EXT-X-ENDLIST
